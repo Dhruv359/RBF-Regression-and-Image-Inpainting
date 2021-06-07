@@ -1,0 +1,52 @@
+CSCC11 - Introduction to Machine Learning, Winter 2021, Assignment 1
+B. Chan, S. Wei, D. Fleet
+===========================================================
+
+For the following questions, please answer concisely in bullet points.
+
+Q1: Dataset Size
+- In general, if I increase the size of the training set, what can we expect about the model's
+  training error? What about the test error?
+    Increasing the size of the training set deacreases the training error. The test error usually decreases.
+
+- In general, if I increase the size of the test set, what can we expect the about the model's
+  training error? What about the test error?
+  Testing error decreases, since the model is able to generalize better. train error increases. 
+
+- How much data should I try to obtain if I want to build a good model?
+  We should keep collecting data until we see overfitting in the model i.e until the train error ans test error
+  do not appear to diverge from horizontal asymptote they appear to reach. 
+
+
+Q2: Model Complexity
+- In general, if the model is too simple, what can we conclude about the training and test errors?
+In general, the test error and training error are both high for small model complexities, and usually
+the test error > train error, i.e. there is underfitting, where the model has high MSE and high variablility. 
+
+- In general, if the model is too complex, what can we conclude about the training and test errors?
+If the model is too complex, the test error is always greater than train error i.e. there is overfitting, 
+where the model learns the training data but fails to generalize on the test data. 
+
+- For each dataset, which (degree) model gives the best performance? How did you find out?
+The degree at which test and train error are thee last give the least error. 
+dataset 1 -> 2
+dataset_2 -> 6
+dataset_3 -> 4
+
+- For each dataset, what degree of polynomial do you think was used to generate the data?
+  dataset_1 -> quadratic 
+  dataset_2 -> 5th degree
+  dataset_3 -> 4th degree. 
+
+
+Q3: Regularization
+- In general, what does regularization do to the weights? Note: You may want to look at the weight values.
+Decreases them so that wi ->0
+
+- In general, if we set lambda (l2_coef) to 0, what do we get?
+We get the lowest and the highest training errors. In theory we get the error obtained minimized the objective fruntion 
+of basis function without regularization.
+
+
+- In general, what does increasing lambda (l2_coef) do to our loss function?
+decreases the loss function. 
